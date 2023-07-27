@@ -1,0 +1,38 @@
+# version: '3.0'
+# services:
+#   api:
+#     build: ./api
+#     container_name: api
+#     ports:
+#       - '3000:3000'
+#     volumes:
+#       - './api/:/app'
+#       - '/app/node_modules'
+#     command: npm start
+#     environment:
+#       - NODE_ENV=development
+#       - DB_HOST=localhost
+#       - DB_PORT=5431
+#       - DB_USERNAME=postgres
+#       - DB_PASSWORD=sofien
+#       - DB_DATABASE=jira_development
+#       - JWT_SECRET=development12345
+
+  # web:
+  #   build: ./client
+  #   container_name: web
+  #   ports:
+  #     - '8080:8080'
+  #   volumes:
+  #     - './client/:/client'
+  #     - '/client/node_modules'
+  #   command: npm start
+
+  db:
+    image: postgres:11-alpine
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: sofien
+    ports:
+      - '5431:5432'
