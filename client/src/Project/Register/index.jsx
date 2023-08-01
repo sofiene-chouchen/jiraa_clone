@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../index.css';
 import { Link } from 'react-router-dom';
+import '../../index.css';
 import {
   Background,
   Card,
@@ -9,21 +9,22 @@ import {
   CenteredContainer,
   LoginTitle,
   Links,
-} from './Style';
+} from './Styles';
 
 export default function index() {
   return (
     <Background>
       <CenteredContainer>
         <Card>
-          <LoginTitle>Login</LoginTitle>
+          <LoginTitle>Register</LoginTitle>
           <LoginField type="text" placeholder="Email" />
           <LoginField type="password" placeholder="Password" />
-          <Button>Login</Button>
+          <LoginField type="password" placeholder="Confirm Password" />
+          <Button>Register</Button>
           <span>
-            New here?
-            <Link to="/register">
-              <Links> Register </Links>
+            Already have an account?{' '}
+            <Link to="/login">
+              <Links>Login </Links>
             </Link>
           </span>
         </Card>

@@ -13,7 +13,7 @@ import { attachPublicRoutes, attachPrivateRoutes } from './routes';
 
 const establishDatabaseConnection = async (): Promise<void> => {
   try {
-    // console.log(' wait');
+    console.log(' wait');
     await createDatabaseConnection();
     console.log('done');
   } catch (error) {

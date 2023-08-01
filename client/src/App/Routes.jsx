@@ -4,6 +4,7 @@ import '../index.css';
 import history from 'browserHistory';
 import Project from 'Project';
 import Login from 'Project/Login/index';
+import Register from 'Project/Register/index';
 import Authenticate from 'Auth/Authenticate';
 import PageError from 'shared/components/PageError';
 
@@ -14,6 +15,7 @@ const Routes = () => (
       <Route path="/authenticate" component={Authenticate} />
       <Route path="/project" component={Project} />
       <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
       <Route component={PageError} />
     </Switch>
   </Router>
